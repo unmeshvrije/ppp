@@ -1,0 +1,42 @@
+
+prun -v -np 1 -native '-l gpu=GTX480' /home/ppp1229/gpu/bin/cuda ../../../images/image00.jpg 8 3
+../../../bin/compare smooth.bmp ../../../sequential/out/image0/smooth.bmp 
+
+prun -v -np 1 -native '-l gpu=GTX480' /home/ppp1229/gpu/bin/cuda ../../../images/image01.jpg 8 3
+../../../bin/compare smooth.bmp ../../../sequential/out/image1/smooth.bmp 
+
+prun -v -np 1 -native '-l gpu=GTX480' /home/ppp1229/gpu/bin/cuda ../../../images/image02.jpg 8 3
+../../../bin/compare smooth.bmp ../../../sequential/out/image2/smooth.bmp 
+
+prun -v -np 1 -native '-l gpu=GTX480' /home/ppp1229/gpu/bin/cuda ../../../images/image03.jpg 8 3
+../../../bin/compare smooth.bmp ../../../sequential/out/image3/smooth.bmp 
+
+prun -v -np 1 -native '-l gpu=GTX480' /home/ppp1229/gpu/bin/cuda ../../../images/image04.bmp 8 3
+../../../bin/compare smooth.bmp ../../../sequential/out/image4/smooth.bmp 
+
+prun -v -np 1 -native '-l gpu=GTX480' /home/ppp1229/gpu/bin/cuda ../../../images/image05.jpg 8 3
+../../../bin/compare smooth.bmp ../../../sequential/out/image5/smooth.bmp 
+
+prun -v -np 1 -native '-l gpu=GTX480' /home/ppp1229/gpu/bin/cuda ../../../images/image06.jpg 8 3
+../../../bin/compare smooth.bmp ../../../sequential/out/image6/smooth.bmp 
+
+prun -v -np 1 -native '-l gpu=GTX480' /home/ppp1229/gpu/bin/cuda ../../../images/image07.jpg 8 3
+../../../bin/compare smooth.bmp ../../../sequential/out/image7/smooth.bmp 
+
+prun -v -np 1 -native '-l gpu=GTX480' /home/ppp1229/gpu/bin/cuda ../../../images/image08.jpg 8 3
+../../../bin/compare smooth.bmp ../../../sequential/out/image8/smooth.bmp 
+prun -v -np 1 -native '-l gpu=GTX480' /home/ppp1229/gpu/bin/cuda ../../../images/image09.bmp 8 3 
+../../../bin/compare smooth.bmp ../../../sequential/out/image9/smooth.bmp 
+prun -v -np 1 -native '-l gpu=GTX480' /home/ppp1229/gpu/bin/cuda ../../../images/image10.jpg 8 3
+../../../bin/compare smooth.bmp ../../../sequential/out/image10/smooth.bmp 
+prun -v -np 1 -native '-l gpu=GTX480' /home/ppp1229/gpu/bin/cuda ../../../images/image11.jpg 8 3
+../../../bin/compare smooth.bmp ../../../sequential/out/image11/smooth.bmp 
+prun -v -np 1 -native '-l gpu=GTX480' /home/ppp1229/gpu/bin/cuda ../../../images/image12.jpg 8 3
+../../../bin/compare smooth.bmp ../../../sequential/out/image12/smooth.bmp 
+prun -v -np 1 -native '-l gpu=GTX480' /home/ppp1229/gpu/bin/cuda ../../../images/image13.jpg 8 3
+../../../bin/compare smooth.bmp ../../../sequential/out/image13/smooth.bmp 
+prun -v -np 1 -native '-l gpu=GTX480' /home/ppp1229/gpu/bin/cuda ../../../images/image14.jpg 8 3
+../../../bin/compare smooth.bmp ../../../sequential/out/image14/smooth.bmp 
+prun -v -np 1 -native '-l gpu=GTX480' /home/ppp1229/gpu/bin/cuda ../../../images/image15.jpg 8 3
+../../../bin/compare smooth.bmp ../../../sequential/out/image15/smooth.bmp 
+
