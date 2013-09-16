@@ -1,0 +1,67 @@
+#!/bin/bash
+
+NP=$1
+
+if [ -z $NP ];
+then
+       echo "Usage: ./test Numer_of_processors"
+       exit 1
+fi
+
+
+
+prun -v -np $NP -sge-script ../../../.prun-openmpi ../asp-par ../../sample_graphs/small.gr.7 > out.$NP.time 2> small.err
+DIFF=`diff adjmat.out ../../aspseq/out/small.out`
+if [ -z "$DIFF" ]; then
+echo "Output ok"
+else
+echo "Invalid output for small"
+fi
+
+prun -v -np $NP -sge-script ../../../.prun-openmpi ../asp-par ../../sample_graphs/test1.gr.new >> out.$NP.time 2> test1.err
+DIFF=`diff adjmat.out ../../aspseq/out/test1.out`
+
+if [ -z "$DIFF" ]; then
+echo "Output ok"
+else
+echo "Invalid output for test1"
+fi
+prun -v -np $NP -sge-script ../../../.prun-openmpi ../asp-par ../../sample_graphs/test2.gr.new >> out.$NP.time 2> test2.err
+DIFF=`diff adjmat.out ../../aspseq/out/test2.out`
+if [ -z "$DIFF" ]; then
+echo "Output ok"
+else
+echo "Invalid output for test2"
+fi
+
+prun -v -np $NP -sge-script ../../../.prun-openmpi ../asp-par ../../sample_graphs/test3.gr.new >> out.$NP.time 2> test3.err
+DIFF=`diff adjmat.out ../../aspseq/out/test3.out`
+if [ -z "$DIFF" ]; then
+echo "Output ok"
+else
+echo "Invalid output for test3"
+fi
+
+prun -v -np $NP -sge-script ../../../.prun-openmpi ../asp-par ../../sample_graphs/test4.gr.new >> out.$NP.time 2> test4.err
+DIFF=`diff adjmat.out ../../aspseq/out/test4.out`
+if [ -z "$DIFF" ]; then
+echo "Output ok"
+else
+echo "Invalid output for test4"
+fi
+
+prun -v -np $NP -sge-script ../../../.prun-openmpi ../asp-par ../../sample_graphs/star_3_5.gr.new >> out.$NP.time 2> star.err
+DIFF=`diff adjmat.out ../../aspseq/out/star.out`
+if [ -z "$DIFF" ]; then
+echo "Output ok"
+else
+echo "Invalid output for STAR"
+fi
+
+prun -v -np $NP -sge-script ../../../.prun-openmpi ../asp-par ../../sample_graphs/europe.gr.7 >> out.$NP.time 2> europe.err
+DIFF=`diff adjmat.out ../../aspseq/out/europe.out`
+if [ -z "$DIFF" ]; then
+echo "Output ok"
+else
+echo "Invalid output for europe"
+fi

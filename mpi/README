@@ -1,0 +1,16 @@
+
+*Compiling*
+Makefile is provided in asppar and in aspseq folders.
+
+*Running / testing*
+asppar contains the folder named "out", which has test scripts.
+To work these test scripts as is, aspseq folder contains pre-generated output files.
+You can just run the test script (it also checks output with diff command) to test application.
+parallel version generates adjmat.out
+Sequential version generates seqmat.out
+
+
+*BONUS*
+To see the path list additional command line argument 'p' (without quotes)
+must be provided.
+

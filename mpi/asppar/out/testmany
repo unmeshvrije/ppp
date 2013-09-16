@@ -1,0 +1,52 @@
+#!/bin/bash
+
+NP=$1
+
+if [ -z $NP ];
+then
+       echo "Usage: ./test Numer_of_processors"
+       exit 1
+fi
+
+
+
+prun -v -np $NP -sge-script ../../../.prun-openmpi ../asp-par ../../sample_graphs/random500.gr.new > random.$NP.time 2> random.err
+DIFF=`diff adjmat.out ../../aspseq/out/random500.out`
+if [ -z "$DIFF" ]; then
+echo "Output ok"
+else
+echo "Invalid output for 500"
+fi
+
+prun -v -np $NP -sge-script ../../../.prun-openmpi ../asp-par ../../sample_graphs/random1000.gr.new >> random.$NP.time 2> random.err
+DIFF=`diff adjmat.out ../../aspseq/out/random1000.out`
+if [ -z "$DIFF" ]; then
+echo "Output ok"
+else
+echo "Invalid output for 1000"
+fi
+
+prun -v -np $NP -sge-script ../../../.prun-openmpi ../asp-par ../../sample_graphs/random2000.gr.new >> random.$NP.time 2> random.err
+DIFF=`diff adjmat.out ../../aspseq/out/random2000.out`
+if [ -z "$DIFF" ]; then
+echo "Output ok"
+else
+echo "Invalid output for 2000"
+fi
+
+prun -v -np $NP -sge-script ../../../.prun-openmpi ../asp-par ../../sample_graphs/random3000.gr.new >> random.$NP.time 2> random.err
+DIFF=`diff adjmat.out ../../aspseq/out/random3000.out`
+if [ -z "$DIFF" ]; then
+echo "Output ok"
+else
+echo "Invalid output for 3000"
+fi
+
+prun -v -np $NP -sge-script ../../../.prun-openmpi ../asp-par ../../sample_graphs/random4000.gr.new >> random.$NP.time 2> random.err
+DIFF=`diff adjmat.out ../../aspseq/out/random4000.out`
+if [ -z "$DIFF" ]; then
+echo "Output ok"
+else
+echo "Invalid output for 4000"
+fi
+

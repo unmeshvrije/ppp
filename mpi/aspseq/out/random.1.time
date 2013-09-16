@@ -1,0 +1,25 @@
+File name:<../../sample_graphs/random500.gr.new>
+Number of vertices = 500
+Total road distance = 478912
+Diameter = 41
+Total time =  1194.997000 milliseconds
+File name:<../../sample_graphs/random1000.gr.new>
+Number of vertices = 1000
+Total road distance = 735624
+Diameter = 71
+Total time =  9543.894000 milliseconds
+File name:<../../sample_graphs/random2000.gr.new>
+Number of vertices = 2000
+Total road distance = 744315
+Diameter = 149
+Total time =  76814.644000 milliseconds
+File name:<../../sample_graphs/random3000.gr.new>
+Number of vertices = 3000
+Total road distance = 992153
+Diameter = 195
+Total time =  259649.238000 milliseconds
+File name:<../../sample_graphs/random4000.gr.new>
+Number of vertices = 4000
+Total road distance = 1240219
+Diameter = 176
+Total time =  615812.045000 milliseconds
